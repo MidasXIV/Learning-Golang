@@ -3,3 +3,17 @@
 ## Learning Golang
 
 ***
+
+## Creating a Go project
+
+```bash
+mkdir go-app
+cd go-app
+go mod init github.com/<USERNAME>/go-app
+```
+
+## Executing a Go file
+
+```bash
+go run <path-to-file>
+```
