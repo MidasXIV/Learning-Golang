@@ -1,9 +1,36 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	fmt.Println("Learning Variables")
+
+	// var<keyword> <variable-name> <variable-type>
+	var i int
+
+	// initializing a variable
+	i = 42
+	i = 27 // variables can be reassigned
+
+	// declaring a variable and assigning a value with type
+	var j float32 = 32
+
+	// declaring a variable and assigning a value
+	// but let Go infer the type
+	k := 34.0
+	// Go infers interger to be of type int or float64
+
+	fmt.Println(i, j, k)
+
+	// print using formatted string
+	// %v is used to print value
+	// %T is used to print type
+	fmt.Printf("%v, %T\n", i, i)
+	fmt.Printf("%v, %T\n", j, j)
+	fmt.Printf("%v, %T\n", k, k)
 
 	// Type                       -> Zero Value
 	// bool                       -> false
@@ -23,7 +50,22 @@ func main() {
 	)
 
 	// all variables declared must be used else go gives an error
-	fmt.Printf("%v %v | Age - %v | Books - %v", firstName, lastName, age, books)
+	fmt.Printf("%v %v | Age - %v | Books - %v\n", firstName, lastName, age, books)
 
-	// no private variables
+	// Go does not support private variables
+	// instead decalred variables in package can be treated as private
+
+	// converting variables from one type to another
+	var m int = 36
+	var n float64
+	n = float64(m)
+
+	var o string
+	// converts int to ascii string
+	o = strconv.Itoa(m)
+
+	fmt.Printf("%v, %T\n", m, m)
+	fmt.Printf("%v, %T\n", n, n)
+	fmt.Printf("%v, %T\n", o, o)
+
 }
