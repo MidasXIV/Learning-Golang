@@ -56,4 +56,29 @@ func main() {
 
 	fmt.Printf("%v , %T\n", r, r)   // 97 , int32
 	fmt.Printf("%v , %T\n", r2, r2) // a , string
+
+	// Summary
+	// 1. Numeric Types
+
+	// ---> Signed integers
+	//      int has varying sizes but min 32 bits
+	//      8 bit (int8) through 64 bit (int64)
+
+	// ---> Unsigned integers ( can store larger numbers as do not stores sign)
+	//      8 bit (byte and uint8) through 32 bit (uint32)
+	// can't mix types, unit8 + unit32
+
+	// ---> Floating point Numbers
+	//      32 and 64 bit versions
+
+	// ---> complex numbers
+	//      zero value 0 + 0i
+	//      come in 64 and 128 bit version
+
+	// 2. Text Types
+	// ---> strings
+	//      UTF8 , immutable
+	//      can be converted to bytes
+	// ---> Rune
+	//      UTF32 , Alias for int32
 }
